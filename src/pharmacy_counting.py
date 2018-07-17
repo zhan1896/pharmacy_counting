@@ -44,7 +44,7 @@ for key in dt_cost:
 for cost in sorted(levels.keys(), reverse=True):
     for key in sorted(levels[cost], reverse=True):
         if dt_cost[key] == int(dt_cost[key]): # check if the number is integer
-            fout.write("%s,%s,%s\n" % (key, len(dt_cnt[key]), int(dt_cost[key])))
+            fout.write("%s,%s,%s\n" % (key, len(dt_cnt[key]), aaint(dt_cost[key])))
         else:
             fout.write("%s,%s,%.2f\n" % (key, len(dt_cnt[key]), aadt_cost[key]))
 
